@@ -1,0 +1,190 @@
+/* Write your CSS here */
+.bg-cont {
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Roboto;
+}
+.card {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.profile-cont {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('https://assets.ccbp.in/frontend/react-js/money-manager/money-manager-bg.png');
+  background-size: cover;
+}
+.user-name {
+  color: #1e293b;
+  margin: 0;
+  margin-bottom: 5px;
+}
+.role {
+  color: #334155;
+  margin: 0;
+}
+.role-style {
+  color: #0b69ff;
+}
+.balance-details-cont {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form-transactions-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.label-style {
+  margin-bottom: 20px;
+  color: #334155;
+}
+.input-form {
+  border: #cbd5e1 1px solid;
+  padding: 15px;
+  padding-top: 20px;
+  border-radius: 10px;
+
+  padding-bottom: 20px;
+}
+.form-title {
+  color: #1e293b;
+  font-weight: bold;
+}
+.input-title {
+  width: 100%;
+  border-radius: 5px;
+  height: 40px;
+  padding: 10px;
+  outline: none;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.amount-input {
+  width: 100%;
+  border-radius: 5px;
+  height: 40px;
+  padding: 10px;
+  outline: none;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.type-select {
+  width: 100%;
+  border-radius: 5px;
+  height: 40px;
+  padding: 10px;
+  outline: none;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.submit-btn {
+  background-color: #0b69ff;
+  color: #ffffff;
+  border: 0;
+  border-radius: 5px;
+  padding: 5px;
+  width: 60px;
+  height: 40px;
+  margin-top: 5px;
+}
+.transaction-cont {
+  border: #cbd5e1 1px solid;
+  padding: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+}
+.history {
+  color: #1e293b;
+  font-weight: bold;
+}
+.transaction-lists {
+  border: #cbd5e1 1px solid;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin-top: 5px;
+}
+.list-style {
+  padding-left: 10px;
+  display: flex;
+  flex-direction: row;
+  color: #334155;
+}
+.list-title {
+  width: 25%;
+}
+.list-amount {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+}
+.list-type {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.line-separator {
+  width: 100%;
+  align-self: stretch;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .balance-details-cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .form-transactions-cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 100%;
+  }
+  .input-form {
+    width: 49%;
+  }
+  .transaction-cont {
+    width: 49%;
+    margin-top: 0;
+    align-self: flex-start;
+  }
+  .profile-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}

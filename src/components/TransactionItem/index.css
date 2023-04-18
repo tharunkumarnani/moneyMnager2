@@ -1,0 +1,35 @@
+/* Write your CSS here */
+.list-item {
+  padding-left: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.list-title1 {
+  flex-grow: 1;
+  width: 25%;
+}
+.list-amount1 {
+  flex-grow: 1;
+
+  width: 25%;
+}
+.list-type1 {
+  flex-grow: 1;
+  width: 25%;
+}
+.line-separator {
+  width: 100%;
+  align-self: stretch;
+}
+.delete-btn {
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.delete-icon-style {
+  width: 30px;
+  height: 30px;
+}

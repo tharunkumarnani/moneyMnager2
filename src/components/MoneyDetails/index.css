@@ -1,0 +1,68 @@
+/* Write your CSS here */
+.balance-cont {
+  width: 30%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #ecfccb;
+  border: #84cc16 1px solid;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.logo-img {
+  width: 15%;
+  margin: 10px;
+}
+.inner-balance {
+  margin: 0;
+  margin-left: 10px;
+}
+.your-balance {
+  color: #1e293b;
+  margin: 5px;
+}
+.display-blns {
+  color: #1e293b;
+  margin: 5px;
+}
+
+.income-cont {
+  width: 30%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #cffafe;
+  border: #06b6d4 1px solid;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.expenses-cont {
+  width: 30%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #ede9fe;
+  border: #7c3aed 1px solid;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+  .balance-cont {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .income-cont {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .expenses-cont {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
