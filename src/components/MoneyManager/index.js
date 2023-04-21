@@ -21,7 +21,7 @@ class MoneyManager extends Component {
   state = {
     title: '',
     amount: '',
-    type: 'Income',
+    type: 'INCOME',
     transactionLists: [],
     balance: 0,
     income: 0,
@@ -38,20 +38,18 @@ class MoneyManager extends Component {
 
   onChangeType = event => {
     const triggerValue = event.target.value
-    let makeValue = null
-    if (triggerValue === 'INCOME') {
-      makeValue = 'Income'
-    } else {
-      makeValue = 'Expenses'
-    }
-    this.setState({type: event.target.value})
+
+    this.setState({type: triggerValue})
   }
 
   calculateTheBlns = () => {
     const {type, amount} = this.state
-    if (type === 'Income') {
-      this.setState({balance: amount, income: amount})
-    } else if (type === 'Expenses') {
+    if (type === 'INCOME') {
+      this.setState(prevState => ({
+        balance: prevState.balance + parseInt(amount),
+        income: prevState.income + parseInt(amount),
+      }))
+    } else if (type === 'EXPENSES') {
       this.setState(prevState => ({
         balance: prevState.balance - amount,
         expenses: amount,
@@ -63,7 +61,12 @@ class MoneyManager extends Component {
     event.preventDefault()
     this.calculateTheBlns()
 
-    const {title, amount, type} = this.state
+    const {title, amount} = this.state
+    let {type} = this.state
+    const filtered = transactionTypeOptions.filter(
+      each => each.optionId === type,
+    )
+    type = filtered[0].displayText
 
     this.setState(prevState => ({
       transactionLists: [
@@ -85,12 +88,12 @@ class MoneyManager extends Component {
 
     const {type, amount} = getDetails[0]
 
-    if (type === 'Income') {
+    if (type === 'INCOME') {
       this.setState(prevState => ({
         balance: prevState.balance - amount,
         income: prevState.income - amount,
       }))
-    } else if (type === 'Expenses') {
+    } else if (type === 'EXPENSES') {
       this.setState(prevState => ({
         balance: prevState.balance + parseInt(amount),
         expenses: prevState.expenses - amount,

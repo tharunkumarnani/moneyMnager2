@@ -5,6 +5,7 @@ const TransactionItem = props => {
   const {transactionDetails, onClickDelete} = props
 
   const {id, title, amount, type} = transactionDetails
+
   const onClickDeleteIcon = () => {
     onClickDelete(id)
   }
@@ -13,7 +14,7 @@ const TransactionItem = props => {
     <>
       <li className="list-item">
         <p className="list-title1">{title}</p>
-        <p className="list-amount1">{amount}</p>
+        <p className="list-amount1">Rs {amount}</p>
         <p className="list-type1">{type}</p>
         <button
           data-testid="delete"
